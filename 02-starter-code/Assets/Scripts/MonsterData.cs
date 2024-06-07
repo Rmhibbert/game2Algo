@@ -81,6 +81,8 @@ public class MonsterData : MonoBehaviour
         if (currentLevelIndex < maxLevelIndex)
         {
             CurrentLevel = levels[currentLevelIndex + 1];
+            Debug.Log("Monster upgraded to level: " + (currentLevelIndex + 1));
         }
     }
 }
+

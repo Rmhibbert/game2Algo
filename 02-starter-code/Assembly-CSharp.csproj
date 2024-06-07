@@ -57,12 +57,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bank.cs" />
+    <Compile Include="Assets\Scripts\MonsterData.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\MonsterSlot.cs" />
     <Compile Include="Assets\Scripts\Tutorial.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
-    <Compile Include="Assets\Scripts\Bank.cs" />
-    <Compile Include="Assets\Scripts\MonsterSlot.cs" />
-    <Compile Include="Assets\Scripts\MonsterData.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\UserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Font\readme.txt" />
