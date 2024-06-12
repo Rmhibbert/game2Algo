@@ -13,12 +13,14 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private Text healthLabel;
     [SerializeField] private Animator topHalfWaveStartLabel;
     [SerializeField] private Animator bottomHalfWaveStartLabel;
-
+    [SerializeField] private Animator GameOverLabel;
     private void Awake()
     {
         GameManager.Instance.OnHealthSet.AddListener(HandleHealthSet);
         GameManager.Instance.OnGoldSet.AddListener(HandleGoldSet);
         EnemySpawner.OnWaveStarted.AddListener(HandleWaveStarted);
+        GameManager.Instance.OnGameOver.AddListener(HandleGameEnd);
+
     }
 
     private void HandleGoldSet()
@@ -38,5 +40,9 @@ public class UserInterface : MonoBehaviour
         // create a flashy effect.
         topHalfWaveStartLabel.SetTrigger("nextWave");
         bottomHalfWaveStartLabel.SetTrigger("nextWave");
+    }
+    private void HandleGameEnd()
+    {
+        GameOverLabel.SetTrigger("gameOver");
     }
 }

@@ -56,4 +56,9 @@ public class GameManager : MonoBehaviour
         Gold = StartingGold;
         Health = 5;
     }
+
+    public void DecreaseHealth(int amount)
+    {
+        Health -= amount;
+    }
 }

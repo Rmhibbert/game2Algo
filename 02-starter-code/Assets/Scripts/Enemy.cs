@@ -17,9 +17,12 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        if (currentWaypointIndex == waypoints.Length)
+
+        if (currentWaypointIndex >= waypoints.Length)
         {
-            // We've reached the end, so do nothing.
+            // Enemy has reached the end, decrease health
+            GameManager.Instance.DecreaseHealth(1);
+            Destroy(gameObject);
             return;
         }
 
